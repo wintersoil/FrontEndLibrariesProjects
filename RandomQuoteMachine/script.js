@@ -26,6 +26,42 @@ let lib = [
   {
     quote: "It does not matter how slowly you go as long as you do not stop.",
     author: "Confucius"
+  },
+  {
+    quote: "Nothing is impossible, the word itself says, \"I'm possible!\"",
+    author: "Audrey Hepburn"
+  },
+  {
+    quote: "First, have a definite, clear practical ideal; a goal, an objective. Second, have the necessary means to achieve your ends; wisdom, money, materials, and methods. Third, adjust all your means to that end.",
+    author: "Aristotle"
+  },
+  {
+    quote: "Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless.",
+    author: "Jamie Paolinetti"
+  },
+  {
+    quote: "The most difficult thing is the decision to act, the rest is merely tenacity.",
+    author: "Amelia Earhart"
+  },
+  {
+    quote: "The question isn't who is going to let me; it's who is going to stop me.",
+    author: "Ayn Rand"
+  },
+  {
+    quote: "Every strike brings me closer to the next home run.",
+    author: "Babe Ruth"
+  },
+  {
+    quote: "There are no traffic jams along the extra mile.",
+    author: "Roger Staubach"
+  },
+  {
+    quote: "Certain things catch your eye, but pursue only those that capture the heart.",
+    author: "Ancient Indian Proverb"
+  },
+  {
+    quote: "A truly rich man is one whose children run into his arms when his hands are empty.",
+    author: "Unknown"
   }
 ];
 $(document).ready(function(){
