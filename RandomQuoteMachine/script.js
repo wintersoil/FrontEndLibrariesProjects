@@ -36,7 +36,7 @@ $(document).ready(function(){
   elem.innerHTML = "<h2>" + quote + "</h2>";
   elem = document.getElementById("author");
   elem.innerHTML = "- " + author;
-});
+
 let re;
 let gr;
 let bl;
@@ -96,3 +96,5 @@ $(".btn.button2").hover(function(){
 }, function(){
       $(this).css("background-color", "rgb("+ re + "," + gr +","+ bl +")");
   });
+
+});
