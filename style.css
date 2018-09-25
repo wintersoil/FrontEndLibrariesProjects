@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$r: 60;
+$g: 179;
+$b: 113;
+$color: rgb($r,$g,$b);
+.contain{
+  background-color: $color;
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  left:0;
+  top:0;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  align-self:center;
+  background-color:white;
+  padding:50px;
+  border-radius:5px;
+  font-family: Raleway;
+  width: 40vw;
+  color: $color;
+}
+.author {
+  text-align: end;
+}
+.btn.button2 {
+  font-family:Verdana;
+  color: white;
+  background-color:$color;
+}
+.btn.button2:hover {
+  color: white;
+  background-color: rgb($r + 30,$g + 30,$b + 30);
+}
+.btn.button1 {
+  font-family:Verdana;
+  color: white;
+  background-color:$color;
+}
+.btn.button1:hover {
+  color: white;
+  background-color: rgb($r + 30,$g + 30,$b + 30);
+}
+.footer{
+  margin-top: 30px;
+  display:flex;
+  justify-content:space-between;
+}
