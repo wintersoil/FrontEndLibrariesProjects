@@ -62,5 +62,21 @@ let lib = [
   {
     quote: "Too many of us are not living our dreams because we are living our fears",
     author: "Les Brown"
+  },
+  {
+    quote: "Life is what we make it, always has been, always will be.",
+    author: "Grandma Moses"
+  },
+  {
+    quote: "If you're offered a seat on a rocket ship, don't ask what seat! Just get on.",
+    author: "Sheryl Sandberg"
+  },
+  {
+    quote: "Dreaming, after all, is a form of planning.",
+    author: "Gloria Steinem"
+  },
+  {
+    quote: "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.",
+    author: "Henry Ford"
   }
 ];
