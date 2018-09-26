@@ -19,6 +19,9 @@
   width: 40vw;
   color: mediumseagreen;
 }
+.quote{
+  text-align: center;
+}
 
 .author {
   text-align: end;

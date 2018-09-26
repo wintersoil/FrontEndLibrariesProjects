@@ -15,41 +15,49 @@ let re;
 let gr;
 let bl;
 $(".button1").click(function(){
-  let index = Math.floor(Math.random() * lib.length);
-  let quote = lib[index].quote;
-  let author = lib[index].author;
-  let elem = document.getElementById("text");
-  while(elem.textContent == quote)
-    {
-      index = Math.floor(Math.random() * lib.length);
-      quote = lib[index].quote;
-      author = lib[index].author;
-    }
-  elem.innerHTML = "<h2>" + quote + "</h2>";
-  elem = document.getElementById("author");
-  elem.innerHTML = "- " + author;
+
   re = Math.floor(Math.random()*255);
   gr = Math.floor(Math.random()*255);
   bl = Math.floor(Math.random()*255);
+  $('.aggregate').animate({
+    opacity: 0,
+    color: "rgb("+ re+ "," + gr +","+ bl +")",
+  },500, null, function(){
+    let index = Math.floor(Math.random() * lib.length);
+    let quote = lib[index].quote;
+    let author = lib[index].author;
+    let elem = document.getElementById("text");
+    while(elem.textContent == quote)
+      {
+        index = Math.floor(Math.random() * lib.length);
+        quote = lib[index].quote;
+        author = lib[index].author;
+      }
 
+    $('.aggregate').animate({
+      opacity: 1,
+      color: "rgb("+ re+ "," + gr +","+ bl +")",
+    }, 500);
 
-  $('.contain').animate({
-      backgroundColor: "rgb("+ re+ "," + gr +","+ bl +")"
-    },1000);
-    $('.quote').animate({
-      color: "rgb("+ re+ "," + gr +","+ bl +")"
-    },1000);
-    $('.author').animate({
-      color: "rgb("+ re+ "," + gr +","+ bl +")"
-    },1000);
+    $('.contain').animate({
+        backgroundColor: "rgb("+ re+ "," + gr +","+ bl +")"
+      },500);
+      $('.author').animate({
+        color: "rgb("+ re+ "," + gr +","+ bl +")"
+      },500);
 
-    $('.btn.button1').animate({
-      backgroundColor: "rgb("+ re+ "," + gr +","+ bl +")", color: "white"
-    },1000);
+      $('.btn.button1').animate({
+        backgroundColor: "rgb("+ re+ "," + gr +","+ bl +")", color: "white"
+      },500);
 
-    $('.btn.button2').animate({
-  backgroundColor: "rgb("+ re+ "," + gr +","+ bl +")"
-},1000);
+      $('.btn.button2').animate({
+        backgroundColor: "rgb("+ re+ "," + gr +","+ bl +")"
+      },500);
+
+      elem.innerHTML = "<h2>" + quote + "</h2>";
+      elem = document.getElementById("author");
+      elem.innerHTML = "- " + author;
+  });
 });
 
 
