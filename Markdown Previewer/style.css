@@ -1,0 +1,85 @@
+.wrapper {
+  background-color: #80B1B3;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-template-areas: ". . markdown1 . ."
+                       ". previewer1 previewer1 previewer1 ."
+}
+.markdown {
+  margin-top: 15px;
+  border: 1px solid black;
+  grid-area: markdown1;
+  box-shadow: 1px 1px 10px DarkSlateGray, -1px -1px 10px DimGray;
+  background-color: #BFD8D9;
+  display:grid;
+  grid-template-rows: 1fr 8fr;
+  grid-template-columns:1fr;
+  grid-template-areas: "a1"
+                       "a2";
+}
+.head-markdown {
+  padding: 5px;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 10px DarkSLateGray;
+  background-color: #568E8F;
+  grid-area:a1;
+}
+#editor {
+  width: 100%;
+  height: 100%;
+  background-color: #BFD8D9;
+  box-sizing:border-box;
+  grid-area:a2;
+  
+}
+.previewer {
+  grid-area: previewer1;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px DarkSlateGray, -1px -1px 10px DimGray;
+  background-color: #BFD8D9;
+  overflow:auto;
+  margin-bottom: 20px;
+}
+.whitecode {
+  background-color: white;
+  color:black;
+  font-family:monospace;
+  display:inline;
+}
+#preview {
+  padding-left: 20px;
+  overflow-wrap:break-word;
+}
+code {
+  background-color:white;
+  display:block;
+  width:95%;
+  font-weight:bold;
+  padding: 5px;
+  overflow:auto;
+}
+blockquote {
+  border-left: 3px solid teal;
+  padding-left: 10px;
+  color: teal;
+}
+table, th, td {
+  border: 1px solid teal;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #4dffff;
+}
+h1 {
+  border-bottom: 2px solid #224B4B;
+}
+h2 {
+  border-bottom: 1px solid #224B4B;
+}
