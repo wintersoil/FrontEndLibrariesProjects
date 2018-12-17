@@ -195,11 +195,11 @@ class MyApp extends React.Component {
       str1 = "";
       updated=true;
     }
-    regex = /\*\*([^*]+)\*\*/gi;
+    regex = /^(.*)\*\*(.*)\*\*(.*)/gm;
     result = regex.test(strea);
     if(result == true)
     {
-      let str1 = strea.replace(regex, '<p><strong>'+'$1'+'</strong></p>\n');
+      let str1 = strea.replace(/^(.*)\*\*(.*)\*\*(.*)/gm, '<p>$1<strong>'+'$2'+'</strong>$3</p>\n');
       this.setState({
         textString: str1
       });
