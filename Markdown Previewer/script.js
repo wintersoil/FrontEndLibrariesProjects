@@ -102,18 +102,33 @@ class MyApp extends React.Component {
       updated=true;
     }
     
-    regex = /-\s(.*)/gi;
+    regex = /(?:-\s[^|\n].*\n)+/g;
     result = regex.test(strea);
     if(result == true)
     {
-      let str1 = strea.replace(regex, '<ul><li>$1</li></ul>');
+      let outing = "<ul>";
+      let bulletedCombination = strea.match(regex);
+      for(let i = 0; i < bulletedCombination.length; i++)
+        {
+          let bulletedArray = bulletedCombination[i].split("\n");
+          bulletedArray = bulletedArray.splice(0, bulletedArray.length-1);
+          for(let j = 0; j < bulletedArray.length; j++)
+            {
+              outing += '<li>' + bulletedArray[j].substring(2).trim() + '</li>'
+            }
+          outing += '</ul>'
+          //console.log(bulletedArray);
+          let str1 = strea.replace(/(?:-\s[^|\n].*\n)+/, outing);
+          
+          this.setState({
+            textString: str1
+          });
+          strea = str1;
+          str1 = "";
+          updated=true;
+          outing = '<ul>';
+        }
 
-      this.setState({
-        textString: str1
-      });
-      strea = str1;
-      str1 = "";
-      updated=true;
     }
     regex = /[^`]`([a-zA-Z<>\/()\s0-9!={}"\.]+)`/gi;
     result = strea.match(regex);
