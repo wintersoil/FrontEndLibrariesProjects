@@ -1,0 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+body{
+  background-color: lightgrey;
+}
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". calculate .";
+}
+.calculator{
+  background-color:black;
+  grid-area: calculate;
+  color: white;
+  font-family: Share Tech Mono;
+  font-size: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr 2fr 2fr 2fr 2fr;
+  grid-template-areas: "output output output output"
+    "stringy stringy stringy stringy"
+    "b1 b1 b3 b4"
+    "b5 b6 b7 b8"
+    "b9 b10 b11 b12"
+    "b13 b14 b15 b16"
+    "b17 b17 b18 b16";
+}
+.numberButt {
+  background-color: #4C4C4C;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: solid 0.1px black;
+}
+.numberButt:hover{
+  border: 0.1px solid grey;
+  color: black;
+}
+#display{
+  grid-area: output;
+}
+#clear {
+  grid-area: b1;
+  background-color: #CE614A;
+}
+#zero{
+  grid-area: b17;
+}
+#equals{
+  grid-area: b16;
+  background-color: teal;
+}
+.stringOutput1{
+  grid-area: stringy;
+  color: orange;
+  font-size: 10px;
+}
